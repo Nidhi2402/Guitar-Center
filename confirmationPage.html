@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Center | Confirmation Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="_style/style.css" />
+    <script src="_script/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div id="topPart">
+        <h2 id="heading">Guitar Center</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Guitar</a></li>
+            <li><a href="#">Bass</a></li>
+            <li><a href="#">Drums</a></li>
+            <li><a href="#">Keyboards</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div id="background" style="background-image: url(_image/bg.jpg);"></div>
+        <div class="row">
+            <div class="col-6">
+                <div id="orderedImage"></div>
+            </div>
+            <div class="col-6">
+                <p id="productDes"></p>
+
+                <p id="productPrice"></p> <br/>
+                <p>&nbsp;&nbsp;</p>
+                <br>
+                <p id="shippingChrage"></p>
+            </div>
+        </div>
+        <div><h2 style="text-align: center; margin: 25px; ">Confirmation</h2></div>
+        <div class="row">
+            
+            <div class="col-2"></div>
+            <div class="col-8">
+            <div id="displayForm"></div>
+            </div>
+            <div class="col-2"></div>
+        
+        </div>
+        <div>
+        <button id="backToHome" style="float: right; margin: 25px; width: 100px; cursor: pointer;"><a href="index.html">Home</a></button>
+        </div>
+        
+    </div>
+    <div class="footer">
+
+            <a href="#">Subscribe</a>
+            <a href="#">Term of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Advertise</a>
+            <a href="#">Contact US</a>
+            <a href="aboutus.html">About US</a>
+        </div>
+    <script>
+        $(document).ready(function() {
+
+            var getItem = localStorage.getItem('buyingItem');
+            document.getElementById('orderedImage').innerHTML = getItem;
+
+            var getItemDes = localStorage.getItem('itemDes');
+            document.getElementById('productDes').innerHTML = getItemDes;
+
+            var getItemPrice = localStorage.getItem('priceOfItem');
+            var intItemPrice = getItemPrice.replace(/[^\d.]/g, '');
+            document.getElementById('productPrice').innerHTML = "Price: $" + parseInt(intItemPrice);
+            
+             var getItemShipping = localStorage.getItem('shippingOfItem');
+            var intShippingVal = getItemShipping.replace(/[^\d.]/g, '');
+            document.getElementById('shippingChrage').innerHTML = "Shipping Charge: $" + parseInt(intShippingVal);
+            
+            var disForm = localStorage.getItem("storeForm");
+            document.getElementById("displayForm").innerHTML = disForm;
+        });
+    </script>
+</body>
+</html>

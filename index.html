@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guiatr Center</title>
+    
+    <link rel="stylesheet" href="_style/style.css" />
+
+    <script src="_script/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+
+    <div id="topPart">
+        <h2 id="heading">Guitar Center</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="dropbtn">Guitar
+                <div class="dropdown-content">
+                <a href="#">Electric Guitar</a>
+                <a href="#">Acoustic Guitar</a>
+                <a href="#">Bass Guitar</a>
+    </div>
+    </a>
+    </li>
+    <li><a href="#">Bass</a></li>
+    <li><a href="#">Drums</a></li>
+    <li><a href="#">Keyboards</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li style="float: right;"><input type="text" name="search" placeholder="Search.." style="background-image: url('_image/search.png');"></li>
+    </ul>
+    </div>
+    <div id="bodyPart">
+        <div id="background" style="background-image: url(_image/main.jpg);"></div>
+        <div id="slidingPart" align="center">
+            <div class="guitarImg fade">
+                <img src="_image/product1.jpg" alt="Product1" />
+            </div>
+            <div class="guitarImg fade">
+                <img src="_image/product2.jpg" alt="Product2" />
+            </div>
+            <div class="guitarImg fade">
+                <img src="_image/product3.jpg" alt="Product3" />
+            </div>
+            <button class="preNext"><a href="#" class="previous" onclick="plusSlides(-1)">&laquo; Previous</a></button>
+            <button class="preNext"><a href="#" class="next" onclick="plusSlides(1)">Next &raquo;</a></button>
+        </div>
+        <div align="center">
+            <button class="accordion">Product Info</button>
+            <div class="panel" id="panelOfProduct">ncuihd</div>
+
+            <button class="accordion">Price and Shipping Info</button>
+            <div class="panel" id="panelOfShipping"></div>
+
+            <button class="accordion">Custmer Reviews</button>
+            <div class="panel" id="panelOfCustomer"></div>
+        </div>
+        <div class="buyOption">
+            <button id="buy">Buy</button>
+        </div>
+
+        <div class="footer">
+
+            <a href="#">Subscribe</a>
+            <a href="#">Term of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Advertise</a>
+            <a href="#">Contact US</a>
+            <a href="aboutus.html">About US</a>
+        </div>
+    </div>
+    <script src="_script/main.js"></script>
+</body>
+
+</html>

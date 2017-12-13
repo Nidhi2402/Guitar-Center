@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Center | Order Review</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="_style/style.css" />
+    <script src="_script/jquery-3.2.1.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="topPart">
+        <h2 id="heading">Guitar Center</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Guitar</a></li>
+            <li><a href="#">Bass</a></li>
+            <li><a href="#">Drums</a></li>
+            <li><a href="#">Keyboards</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid bg">
+        <div id="background" style="background-image: url(_image/bg.jpg);"></div>
+        <div class="row">
+            <div class="col-6">
+                <div id="orderedImage"></div>
+            </div>
+            <div class="col-6">
+                <p id="productDes"></p>
+
+                <p id="productPrice"></p> <br/>
+                <p>&nbsp;&nbsp;</p>
+                <br>
+                <p id="shippingChrage"></p>
+            </div>
+        </div>
+        <div class="row" id="div1">
+            <div class="col-3"></div>
+            <div class="col-6 billingOpt">
+                <form>
+                    <fieldset>
+                        <legend>Billing Address</legend>
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="contactnumber">Contact No</label>
+                        <input type="tel" id="contactnumber" name="contactNo" placeholder="Contact Number">
+                        <label for="emailid">Email ID</label>
+                        <input type="email" id="emailid" name="emailid" placeholder="Email ID">
+                        <label for="mailingadd">Mailing Address</label>
+                        <input type="text" id="mailingadd" name="mailing add" placeholder="Mailing Address">
+                        <label for="cityname">City</label>
+                        <input type="text" id="cityname" name="City Name" placeholder="City" style="width: auto;">
+                        <label for="zipcode">Zip Code</label>
+                        <input type="text" id="zipcode" name="Zip code" placeholder="Zip Code" style="width: auto;">
+                        <form class="credit-card">
+                            <div class="form-body">
+                                <label for="creditcard">Card Number</label>
+                                <input type="text" name="Card Number" class="card-number" placeholder="Card Number" style="width: auto;">
+                                <!--       Date Field           -->
+                                <!--
+                                <div class="date-field">
+                                    <div class="month">
+-->
+                                <select class="month" name="Month" style="width: auto;">
+          <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select>
+
+                                <!--                                </div>-->
+                                <select class="year" name="Year" style="width: auto;">
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+                                <div class="card-verification">
+                                    <div class="cvv-input">
+                                        <label for="CVV"> CVV </label>
+                                        <input type="text" placeholder="CVV" style="width: auto;">
+                                    </div>
+
+                                    <div class="cvv-details">
+                                        <p style="width: auto;">3 or 4 digits usually found <br> on the signature strip</p>
+                                    </div>
+
+                                </div>
+
+                                <button type="submit" class="proceed-btn"><a>Review Order</a></button>
+                            </div>
+                        </form>
+
+                    </fieldset>
+                </form>
+                
+            </div>
+            <div class="col-3"></div>
+
+        </div>
+        <div class="row" id="div2">
+            <div class="col-2"></div>
+            <div class="col-8 billingOpt" style="margin-top: 20px;">
+                <h3>Preview Order Info</h3>
+                <form class="customer">
+                    <label for="fname"> Full Name: </label> <span id="displayFname"></span> <br/>
+                    <label for="contactnumber"> Contact No: </label> <span id="displaynumber"></span><br/>
+                    <label for="emailid"> Email ID: </label> <span id="displayEmailId"></span><br/>
+                    <label for="mailingadd"> Mailing Add: </label> <span id="displayAdd"></span><br/>
+                    <label for="credit card"> Card Information: </label> <span id="creditcard"></span><br/>
+<!--                    <strong><label for="Total Amount">Total Amount: </label>  <span id="totalAmount"></span> </strong> <br/>-->
+                    
+                    <div class="row">
+                    <div class="col-6 amount" style="text-align: right;">
+                        <span>Price of Guitar: </span><br/>
+                        <span>Shipping Charge: </span><br/>
+                        <span>Tax: </span><br />
+                        <span>Total:</span><br />
+                    </div>
+                    <div class="col-6">
+                        <span id="price">650</span><br />
+                        <span id="shippingCharge"></span><br/>
+                        <span id="tax"> 80</span><br />
+                        <span id="total"></span> <br/>
+
+                    </div>
+                </div>
+                    
+                </form>
+
+                <button id="placaeOrder" name="Buy" style="float: right;">Buy</button>
+                <button id="editInfo" name="Edit" style="float: left;">Edit</button>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+    </div>
+    <div class="footer">
+
+        <a href="#">Subscribe</a>
+        <a href="#">Term of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Advertise</a>
+        <a href="#">Contact US</a>
+        <a href="aboutus.html">About US</a>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+
+            var getItem = localStorage.getItem('buyingItem');
+            document.getElementById('orderedImage').innerHTML = getItem;
+
+            var getItemDes = localStorage.getItem('itemDes');
+            document.getElementById('productDes').innerHTML = getItemDes;
+
+            var getItemPrice = localStorage.getItem('priceOfItem');
+            var intItemPrice = getItemPrice.replace(/[^\d.]/g, '');
+            document.getElementById('productPrice').innerHTML = "Price: $" + parseInt(intItemPrice);
+            
+            document.getElementById('price').innerHTML = "$" + parseInt(intItemPrice);
+            
+            var getItemShipping = localStorage.getItem('shippingOfItem');
+            var intShippingVal = getItemShipping.replace(/[^\d.]/g, '');
+            document.getElementById('shippingChrage').innerHTML = "Shipping Charge: $" + parseInt(intShippingVal);
+            
+            document.getElementById("shippingCharge").innerHTML = "$" + parseInt(intShippingVal);
+            var tax = (0.09) * parseInt(intItemPrice);
+            document.getElementById("tax").innerHTML = "$" + tax;
+            document.getElementById("total").innerHTML = "$" + (parseInt(intItemPrice) + parseInt(intShippingVal) + tax);
+            $('.proceed-btn').click(function() {
+                //Store Form data
+                var inputName = $("#div1").find('input[name="firstname"]').val();
+                localStorage.setItem("fName", inputName);
+                var inputLName = $("#div1").find('input[name="lastname"]').val();
+                localStorage.setItem("lName", inputLName);
+                var inputCN = $("#div1").find('input[name="contactNo"]').val();
+                localStorage.setItem("phoneNo", inputCN);
+                var inputEmailID = $("#div1").find('input[name="emailid"]').val();
+                localStorage.setItem("emailId", inputEmailID);
+                var inputMailingAdd = $("#div1").find('input[name="mailing add"]').val();
+                localStorage.setItem("mailingAdd", inputMailingAdd);
+                var inputCity = $("#div1").find('input[name="City Name"]').val();
+                localStorage.setItem("cityName", inputCity);
+                var inputZip = $("#div1").find('input[name="Zip code"]').val();
+                localStorage.setItem("zipCode", inputZip);
+                var inputCard = $("#div1").find('input[name="Card Number"]').val();
+                localStorage.setItem("cardDetail", inputCard);
+                var inputcardDetail = $("#div1").find('select[name="Month"]').val();
+                localStorage.setItem("cardMonth", inputcardDetail);
+                var inputYear = $("#div1").find('select[name="Year"]').val();
+                localStorage.setItem("cardYear", inputYear);
+
+                // Getting form data
+                var disname = localStorage.getItem('fName');
+                var disLname = localStorage.getItem('lName');
+                document.getElementById('displayFname').innerHTML = disname + " " + disLname;
+                //                var disLname = localStorage.getItem('lName');
+                //                document.getElementById('displayLname').innerHTML = disLname;
+                var disnum = localStorage.getItem('phoneNo');
+                document.getElementById('displaynumber').innerHTML = disnum;
+                var disId = localStorage.getItem('emailId');
+                document.getElementById('displayEmailId').innerHTML = disId;
+                var disAdd = localStorage.getItem('mailingAdd');
+                var disCity = localStorage.getItem('cityName');
+                var disZip = localStorage.getItem('zipCode');
+                document.getElementById('displayAdd').innerHTML = disAdd + "," + " " + disCity + "," + " " + disZip;
+                var disCardDetail = localStorage.getItem('cardDetail');
+                var disCardYear = localStorage.getItem('cardYear');
+                var disCardMonth = localStorage.getItem('cardMonth');
+                document.getElementById('creditcard').innerHTML = disCardDetail + " " + "<br>" + "Expiration Month: " + disCardMonth + "  ,  " + " Year: " + disCardYear;
+                //                document.getElementById("totalAmount").innerHTML
+                //                var xhttp = new XMLHttpRequest();
+                //                xhttp.onreadystatechange = function(){
+                //                    if(this.readyState == 4 && this.status == 200){
+                //                        var n = JSON.parse(this.responseText);
+                //                        var m = n.allProducts;
+                //                        for (i in m){
+                //                            var k = m[slideIndex - ]
+                //                        }
+                //                    }
+                //                }
+
+                if ($("#div1").is(":visible")) {
+                    $('#div1').hide("slow");
+                    $('#div2').show();
+                }
+
+                $('.customer').css('align', 'center');
+
+                return false;
+
+            });
+
+            $('#editInfo').click(function() {
+                if ($('#div2').is(":visible")) {
+                    $("div2").hide();
+                    $("div1").show();
+                }
+                return false;
+            });
+            $('#placaeOrder').click(function() {
+
+                var saveForm = $(".billingOpt").find(".customer").html();
+                localStorage.setItem("storeForm", saveForm);
+                window.location.href = "confirmationPage.html";
+            });
+
+        });
+
+    </script>
+    <!--    <script src="_script/main.js"></script>-->
+</body>
+
+</html>

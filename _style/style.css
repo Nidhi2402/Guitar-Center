@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    z-index:-1;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#heading {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    background-color: brown;
+    font-size: 45px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropbtn:hover  .dropdown-content{
+    display: block;
+}
+li input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 4px 3px;
+
+}
+
+li a:hover {
+    background-color: darkgrey;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: darkgrey;
+    color: black;
+}
+
+.previous {
+    background-color: black;
+    color: white;
+    width: 63px;
+
+}
+
+.next {
+    background-color: black;
+    color: white;
+    width: 63px;
+}
+
+.preNext {
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 0;
+    margin-right: 100px;
+    margin-left: 100px;
+
+}
+
+.guitarImg {
+    display: none;
+
+}
+
+img {
+    margin: 20px;
+    width: 350px;
+    height: 450px;
+}
+
+.slidingPart {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active,
+button.accordion:hover {
+    background-color: #ccc;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    text-align: justify;
+    background-color: white;
+    width: 464px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+#buy {
+    cursor: pointer;
+    margin-left: 1064px;
+    margin-top: 100px;
+    width: 85px;
+    height: 34px;
+    margin-bottom: 50px;
+}
+.footer{
+    overflow: hidden;
+    background-color: #333;
+    
+    bottom: 0;
+    width: 100%;
+}
+.footer a{
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+/*#orderedImage {
+    padding: 0;
+    float: left;
+    width: 50%;
+    min-width: 350px;
+}*/
+#placaeOrder , #editInfo{
+    cursor: pointer;
+    width: 85px;
+    height: 34px;
+    margin-bottom: 50px;
+}
+#orderedImage img {
+    margin-left: 200px;
+}
+
+#productDes {
+    padding-top: 30%;
+}
+
+p {
+    /*    min-width: 350px;*/
+    font-size: 20px;
+    box-sizing: border-box;
+    float: left;
+
+}
+
+form {
+    /*padding-top: 600px;
+    margin-left: 500px;*/
+    border: 0px;
+
+}
+
+.billingOpt {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input[type=tel],
+select {
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input[type=email],
+select {
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+
+#background {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ z-index: -1;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+.card-number {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+}
+.month ,
+.year {
+border: 2px solid #e1e8ee;
+    border-radius: 6px;
+}
+.cvv-input{
+    float: left;
+}
+.cvv-details{
+    float: right;
+}
+.proceed-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #7dc855;
+    cursor: pointer;
+    font-size: 16px;
+    width:auto;
+    border-color: transparent;
+    border-radius: 6px;
+    float: right;
+}
+.proceed-btn a {
+    color: #fff;
+     text-decoration: none;
+}
+
+#div2 {
+    display: none;
+}
+#displayForm{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
